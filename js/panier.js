@@ -85,7 +85,7 @@ async function send(e) {
             headers: headers,
             body: JSON.stringify({ contact, products }) // { contact: contact, products: products }
         })
-      
+    
         const body = await response.json()
 
         
@@ -93,14 +93,16 @@ async function send(e) {
 
         window.location = `/pages/confirmation-commande.html?order-id=${body.orderId}`; // redirige sur la page et ajoute un paramètre url
         return true;
-      
+    
         console.log(body);
     } catch (err) {
         alert("Oups... Une erreur est survenue.")
         console.log(err);
     }
     return false;
+    
   };
+
 
 loadPanier();
 

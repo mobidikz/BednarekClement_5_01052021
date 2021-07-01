@@ -65,6 +65,8 @@ let nomProduit = "";
 let prixProduit ="";
 let idProduit =""
 
+
+
 function setData(){
  
     couleurProduit = document.querySelector("select").value;
@@ -86,8 +88,12 @@ function setData(){
   
     localStorage.setItem("unNounours", JSON.stringify(unNounours));
 
+        
+    $('.toast').toast("show"); // affiche une notification d'ajout au panier
+
 }
 
+
 presProduct();
-setData();
+
 
